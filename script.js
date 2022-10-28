@@ -51,12 +51,12 @@ existingElement.appendChild(table);
 var tiles = document.querySelectorAll("td");
 tiles.forEach(tile => {
     tile.addEventListener('click', ()=>{
-        toggleMenu(tile);
+        toggleClicked(tile);
     });
 });
 
 //Removing 'clicked' class from all tiles, adding it to clicked tile
-function toggleMenu(tile) {
+function toggleClicked(tile) {
     console.log(tile.innerHTML);
     tiles.forEach(tile => {tile.classList.remove("clicked");});
     tile.classList.add("clicked");
